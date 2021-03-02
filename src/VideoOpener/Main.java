@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\37126\\Desktop\\selenium-java-3.141.59\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\37126\\Desktop\\RandomVideoOpener.WithSeleneum\\Selenium JARs+Chromedriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         Random rand = new Random();
         int number = rand.nextInt(50);

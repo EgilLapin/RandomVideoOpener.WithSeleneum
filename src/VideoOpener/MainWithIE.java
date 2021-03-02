@@ -1,21 +1,20 @@
 package VideoOpener;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Main {
+class Main {
 
 
     public static void main(String[] args) {
-	// write your code here
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\37126\\Desktop\\RandomVideoOpener.WithSeleneum\\Selenium JARs+drivers\\Drivers\\chromedriver.exe");
+        System.setProperty("webdriver.ie.driver", "C:\\Users\\37126\\Desktop\\RandomVideoOpener.WithSeleneum\\Selenium JARs+drivers\\Drivers\\IEDriverServer.exe");
 
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new InternetExplorerDriver();
         Random rand = new Random();
         int number = rand.nextInt(50);
 
@@ -32,8 +31,9 @@ public class Main {
         }
 
         driver.manage().window().maximize();
-        driver.findElement(By.className("play-icon")).click();
-        driver.findElement(By.className("fullscreen")).click();
+        /// Play not working, will try later
+        //driver.findElement(By.className("play-icon")).click();
+        //driver.findElement(By.className("fullscreen-icon")).click();
 
     }
 }
